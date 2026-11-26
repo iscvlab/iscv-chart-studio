@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "charts": {
+      "command": "node",
+      "args": [
+        "${PLUGIN_ROOT}/bin/server.cjs",
+        "--data-dir",
+        "${PLUGIN_DATA}"
+      ]
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "iscv-chart-studio",
+  "displayName": "ISCV Chart Studio",
+  "version": "1.0.0",
+  "description": "Interactive 45-family scientific chart studio & 14 colorblind-safe palettes for inline chat cards, side panel, and full-page views by ISCV Lab.",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "Plot a grouped column bar chart inline comparing Q1-Q4 revenue by product line",
+    "Open ISCV Chart Studio in the side panel with a Raincloud distribution dataset",
+    "List all 45 ISCV chart families and 14 colorblind-safe scientific palettes"
+  ],
+  "author": {
+    "name": "ISCV | Isocurve Research Lab",
+    "url": "https://github.com/iscvlab"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/iscvlab/iscv-chart-studio#readme",
+  "repository": "https://github.com/iscvlab/iscv-chart-studio",
+  "keywords": [
+    "charts",
+    "visualization",
+    "data-viz",
+    "statistics",
+    "svg",
+    "iscv"
+  ]
+}
