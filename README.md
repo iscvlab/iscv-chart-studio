@@ -1,7 +1,7 @@
 <div align="center">
   <img src="assets/logo.svg" width="76" alt="ISCV Chart Studio logo" />
   <h1>ISCV Chart Studio</h1>
-  <p><strong>Self-contained 45-family scientific chart studio &amp; 14 colorblind-safe palettes for Antigravity 2.0 inline chat cards, side panels, and full-page studio views.</strong></p>
+  <p><strong>Offline 45-family SVG chart studio for Antigravity 2.0 inline chat, side panel &amp; full-page views with A1 matrix editing, 14 palettes &amp; SVG/PNG/CSV export.</strong></p>
 
   <p>
     <img src="https://img.shields.io/badge/version-1.0.0-1D4ED8?style=flat-square" alt="Version v1.0.0" />
@@ -69,7 +69,7 @@ flowchart LR
 
         subgraph Core ["Pure Node + Browser SVG Engine"]
             Solvers["45 Chart Solvers (5 Packs)"]
-            Palettes["14 Colorblind-Safe Palettes"]
+            Palettes["14 Scientific Palettes"]
         end
 
         subgraph Surfaces ["Antigravity 2.0 UI Surfaces"]
@@ -130,7 +130,7 @@ flowchart LR
 
 ## 2. Quick Start & Installation
 
-> **Antigravity Marketplace Status**: **`PREPARED`** *(Validated locally with `agy plugin validate --strict`; pending official Antigravity Marketplace listing. Install directly from GitHub or a local clone using the commands below.)*
+> **Antigravity Marketplace Status**: **`IN PIPELINE`** *(Partner intake submitted `2026-11-26`; validated with `agy plugin validate --strict`; pending official Antigravity Marketplace review. Install directly from GitHub or a local clone using the commands below.)*
 
 ### Option A — Direct GitHub Install (Antigravity CLI)
 
@@ -156,7 +156,7 @@ Invoke the bundled [`/iscv-chart-studio`](skills/iscv-chart-studio/SKILL.md) ski
 
 - *"Plot a grouped column bar chart inline comparing Q1-Q4 revenue by product line"*
 - *"Open ISCV Chart Studio in the side panel with a Raincloud distribution dataset"*
-- *"List all 45 ISCV chart families and 14 colorblind-safe scientific palettes"*
+- *"List all 45 ISCV chart families and 14 scientific palettes"*
 - *"Use `/iscv-chart-studio` to render this CSV as a Sankey diagram with the `okabe_ito_universal` palette and explicit title, subtitle, and source."*
 
 ---
@@ -168,7 +168,7 @@ Invoke the bundled [`/iscv-chart-studio`](skills/iscv-chart-studio/SKILL.md) ski
 | # & Tool Name | Visibility & Surfaces | Key Parameters | Returned Payload / Output |
 | :--- | :--- | :--- | :--- |
 | **1. `iscv_plot_inline`** | Model + App (`inline.html`) | `chartId`, `rawData` / `rows`, `title`, `paletteId`, `isDark` | Light-default inline SVG card + `summary` + optional `saveSvgPath` |
-| **2. `iscv_open_studio`** | Model + App (`aux_pane`, `global`) | Same chart spec schema + `cardWidth`, `cardHeight` | Full studio workbench (`studio.html`) with A1 grid & 5 exports |
+| **2. `iscv_open_studio`** | Model + App (`aux_pane`, `global`) | Same chart spec schema + `cardWidth`, `cardHeight` | Full studio workbench (`studio.html`) with A1 grid & SVG/PNG/CSV/JSON export |
 | **3. `iscv_chart_catalog`** | Model + App (`readOnlyHint`) | `packId` (`pack0`..`pack4`), `query` | All `45` chart IDs, headers & `14` palette definitions |
 | **4. `iscv_save_export`** | App-only UI export bridge | `format` (`svg`, `png`, `json`, `csv`), `spec`, `pngBase64` | Atomic file write to `${PLUGIN_DATA}/exports` + `fileUri` |
 | **5. `iscv_load_dataset`** | App-only (`readOnlyHint`) | `datasetToken` (`ds_*`) | Hydrates cached datasets exceeding `800 KB` off-trajectory |
