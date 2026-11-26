@@ -33,4 +33,5 @@ jobs:
         run: npm test
 
       - name: Verify built plugin artifacts
-        run: node -e "const fs = require('node:fs'); for (const p of ['plugin.json', 'mcp_config.json', 'assets/logo.svg', 'skills/iscv-chart-studio/SKILL.md', 'bin/server.cjs', 'ui/inline.html', 'ui/studio.html']) { if (!fs.existsSync(p) || fs.statSync(p).size === 0) throw new Error('Missing or empty: ' + p); } console.log('All plugin artifacts verified.');"
+        run: |
+          node -e "const fs = require('node:fs'); for (const p of ['plugin.json', 'mcp_config.json', 'assets/logo.svg', 'skills/iscv-chart-studio/SKILL.md', 'bin/server.cjs', 'ui/inline.html', 'ui/studio.html']) { if (!fs.existsSync(p) || fs.statSync(p).size === 0) throw new Error('Missing or empty ' + p); } console.log('All plugin artifacts verified.');"
